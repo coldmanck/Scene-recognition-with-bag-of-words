@@ -180,6 +180,6 @@ Extracting features, clustering to build a universal dictionary, and building hi
 
  
 </p><h2> Credits </h2> 
-<p>Project description and code by James Hays and Sam Birch. Figures in this handout from <a href="http://www.robots.ox.ac.uk/~vgg/research/encoding_eval/">Chatfield et al.</a> and <a href="http://www.cs.illinois.edu/homes/slazebni/">Lana Lazebnik</a>.
+<p>Assignment modified by Min Sun based on project description and code by James Hays and Sam Birch. Figures in this handout from <a href="http://www.robots.ox.ac.uk/~vgg/research/encoding_eval/">Chatfield et al.</a> and <a href="http://www.cs.illinois.edu/homes/slazebni/">Lana Lazebnik</a>.
 
 </p></div> 
