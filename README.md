@@ -97,8 +97,7 @@ The starter code contains more complete discussions of useful functions from VL 
 </p>
 
 <h2>Write up</h2> 
-<p> 
-For this project, and all other projects, you must do a project report in [Markdown](https://help.github.com/articles/markdown-basics). We provide you with a placeholder [index.md](./results/index.md) document which you can edit. In the report you will describe your algorithm and any decisions you made to write your algorithm a particular way. Discuss any extra credit you did and show what contribution it had on the results (e.g. performance with and without each extra credit component).</p>
+For this project, and all other projects, you must do a project report in [Markdown](https://help.github.com/articles/markdown-basics). We provide you with a placeholder [index.md](./results/index.md) document which you can edit. In the report you will describe your algorithm and any decisions you made to write your algorithm a particular way. Discuss any extra credit you did and show what contribution it had on the results (e.g. performance with and without each extra credit component).
 <p>
 You are required to report the accuracy you achieved for the three recognition pipelines above (tiny images + nearest neighbor, bag of SIFT + nearest neighbor, and bag of SIFT + 1 vs all linear SVM). The accuracy number reported by the starter code -- the average of the diagonal of the confusion matrix -- will suffice. However, for your best performing recognition setup you should include the <a href="https://github.com/NTHU-EE-CV-2014-Fall/homework3/blob/master/results/index.md">full confusion matrix and the table of classifier results produced by the starter code</a>. Simply copy the html and images into your writeup.
 </p>
