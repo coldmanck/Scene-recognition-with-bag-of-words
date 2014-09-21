@@ -1,0 +1,213 @@
+table {
+	vertical-align: top; 
+    border-top-style: none; 
+    border-right-style: none; 
+    border-left-style: none; 
+    border-bottom-style: none;
+}
+body {
+    font-size: 15px;
+    color: black; 
+    font-family: Georgia, "New Century Schoolbook", Times, serif;
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+tt {
+}
+
+img {
+    border-top-style: none;
+    border-right-style: none; 
+    border-left-style: none; 
+    border-bottom-style: none;
+    padding-right: 0px; 
+    padding-left: 10px;
+    padding-bottom: 10px; 
+    padding-top: 10px;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+h2 {
+	margin-top: 12px; 
+    font-weight: normal; 
+    margin-bottom: 0px;
+}
+
+h3 {
+	margin-top: 6px;
+    font-size: small; 
+    margin-bottom: 0px;
+}
+
+p {
+	margin-top: 0px;
+    margin-left: 1em;   
+}
+
+a {
+	font-weight: bolder;
+    text-decoration: none;
+}
+a:link {
+	color: #990000;
+}
+a:visited {
+	color: #990000;
+}
+ul, ol {
+	margin-top: 1px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding-bottom: 1em;
+}
+
+li {
+    margin: 0;
+}
+blockquote {
+	margin-left: 6em; 
+    text-indent: -4em;
+}
+blockquote p {
+	margin-top: 0px; 
+    margin-bottom: 0px;
+}
+#menu {
+	background-color: transparent;
+}
+#menu a {
+	display: block; 
+    color: #666666;
+}
+#menu a:hover {
+	color: white; 
+    background-color: #990000;
+}
+#menu td {
+	padding-right: 0px; 
+    border-top: #999999 1px solid; 
+    padding-left: 0px; 
+    padding-bottom: 0px; 
+    margin: 0px; font: 10px/15px verdana, lucida, arial, sans-serif; 
+    width: 100px; 
+    color: black; 
+    padding-top: 0px; 
+    text-align: center;
+}
+#internalmenu td {
+	padding-right: 0px;
+    padding-left: 0px; 
+    background: white; 
+    padding-bottom: 0px; 
+    margin: 0px; 
+    font: 10px/15px verdana, lucida, arial, sans-serif; 
+    color: black; 
+    padding-top: 0px; 
+    text-align: right;
+}
+#internalmenu a {
+	display: block; 
+    color: #666666;
+}
+#content {
+	clear: right;
+}
+#sidebar {
+	padding-right: 25px; 
+    margin-top: 0.5em; 
+    text-align: right;
+}
+#sidebar img {
+	margin: 45px 0px 5px;
+}
+#sidebar h2 {
+	font-weight: normal; 
+    font-size: smaller; 
+    margin: 0px
+}
+#primarycontent {
+	line-height: 1.5; 
+    padding-top: 25px
+}
+#footer {
+	clear: both; 
+    font-size: x-small; 
+    padding-bottom: 10px; 
+    padding-top: 20px
+}
+#projectlist img {
+	padding-right: 10px; 
+    padding-left: 3px; 
+    padding-bottom: 3px; 
+    vertical-align: middle; 
+    padding-top: 3px
+}
+#projectlist table {
+	padding-left: 15px; 
+    padding-bottom: 15px; 
+    border-collapse: collapse; 
+    border-spacing: 0
+}
+#summary td {
+	border-right: 0px; 
+    padding-right: 5px; 
+    border-top: #999999 1px solid; 
+    padding-left: 5px; 
+    margin: 0px; 
+    border-left: 0px
+}
+#people {
+	padding-left: 10px; 
+    margin-left: 0px; 
+    list-style-type: none
+}
+div.abstract {
+	clear: both; 
+    padding-right: 0px; 
+    border-top: #999999 1px solid; 
+    margin-top: 25px; 
+    padding-left: 0px; 
+    padding-bottom: 0px; 
+    padding-top: 0px
+}
+div.abstract pre {
+	font-size: xx-small; 
+    margin: 0px
+}
+div.abstract h2 {
+	
+}
+div.abstract img {
+	padding-right: 0px; 
+    padding-left: 12px; 
+    float: right; 
+    padding-bottom: 6px; 
+    padding-top: 6px
+}
+div.abstract li {
+	margin: 0px
+}
+div.timestamp {
+	display: block;
+    font-size: x-small; 
+    color: #999999; 
+    padding-top: 10px; 
+    border-bottom: #999999 1px solid; 
+    text-align: right
+}
+.hide {
+	display: none
+}
+#courses td {
+	padding-right: 6px; 
+    padding-left: 6px; 
+    padding-bottom: 6px; 
+    padding-top: 6px
+}
+td.coursename {
+	font-weight: bolder
+}
