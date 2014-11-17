@@ -170,7 +170,7 @@ Finally, there will be extra credit and recognition for the student who achieves
    <li> +20 pts: Build histograms of visual words for training and testing images. (<code>get_bags_of_sifts.m</code>)</li>
    <li> +20 pts: Train 1-vs-all SVMs on your bag of words model. (<code>svm_classify.m</code></li>
    <li> +20 pts: Writeup with design decisions and evaluation.</li>
-   <li> +10 pts: Extra credit (up to <del>ten</del>twenty points) </li>
+   <li> +20 pts: Extra credit (up to <del>ten</del>twenty points) </li>
    <li> -5*n pts: Lose 5 points for every time (after the first) you do not follow the instructions for the hand in format </li> 
 </ul> 
  
