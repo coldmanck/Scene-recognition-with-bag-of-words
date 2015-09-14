@@ -9,7 +9,7 @@ An example of a typical bag of words classification pipeline. Figure by <a href=
 <h2>Brief</h2> 
 <p> 
 </p><ul> 
-  <li>Due date: October 18th, 11:59pm</li> 
+  <li>Due date: Nov. 18th, 11:59pm</li> 
   <li><i>Partial</i> You have to download <a href="http://www.vlfeat.org/download.html">VLFeat 0.9.17 binary package</a></li> 
   <li>VL Feat Matlab reference: <a href="http://www.vlfeat.org/matlab/matlab.html">http://www.vlfeat.org/matlab/matlab.html</a> 
   <li>Required files: results/index.md, and code/</li>
