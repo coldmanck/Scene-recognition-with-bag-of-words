@@ -160,10 +160,9 @@ Download the repository, open your matlab and change the work folder to `homewor
 Finally, click *Run*!
 
 ### Results
-**Tiny images representation and nearest neighbor classifier**
 
 <center>
-<h1>Project 3 results visualization</h1>
+<h1>Tiny images representation and nearest neighbor classifier</h1>
 <img src="confusion_matrix.png">
 
 <br>
@@ -370,10 +369,8 @@ Accuracy (mean of diagonal of confusion matrix) is 0.201
 </table>
 </center>
 
-**Bag of SIFT representation and nearest neighbor classifier**
-
 <center>
-<h1>Project 3 results visualization</h1>
+<h1>Bag of SIFT representation and nearest neighbor classifier</h1>
 <img src="confusion_matrix.png">
 
 <br>
@@ -580,10 +577,8 @@ Accuracy (mean of diagonal of confusion matrix) is 0.463
 </table>
 </center>
 
-**Bag of SIFT representation and linear SVM classifier**
-
 <center>
-<h1>Project 3 results visualization</h1>
+<h1>Bag of SIFT representation and linear SVM classifier</h1>
 <img src="confusion_matrix.png">
 
 <br>
@@ -790,10 +785,8 @@ Accuracy (mean of diagonal of confusion matrix) is 0.614
 </table>
 </center>
 
-**Bag of SIFT representation and Non-linear SVM classifier (LibSVM with RBF kernel)**
-
 <center>
-<h1>Project 3 results visualization</h1>
+<h1>Bag of SIFT representation and Non-linear SVM classifier (LibSVM with RBF kernel)</h1>
 <img src="confusion_matrix.png">
 
 <br>
