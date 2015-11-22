@@ -33,7 +33,7 @@ for i = 1:size(image_paths)
     end
     
     new_img = double(new_img);
-    new_img = new_img ./ norm(new_img);
+    new_img = new_img ./ sum(new_img);
     new_img = new_img - mean(new_img);
     
     image_feats = [image_feats; new_img];
