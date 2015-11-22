@@ -50,37 +50,6 @@ for i = 1:size(test_image_feats,1)
 end
 ```
 
-- **Fitting the Transformation Matrix (Method 1)**
-
-After matching descriptors between two images, next we may want to find affine transformation matrix between them.  We need to find a transformation matrix H such that `[X2 Y2 1] = [X1 Y1 1]* H'` With a sufficient number of points. By means of Matlab, one can easily calculate the answer of `Ax = b` by `x = A\b`.
-
-In my `ComputeAffineMatrix.m`:
-```
-H_transpose = P1'\P2';
-H = H_transpose';
-```
-so that I can get the transformation matrix H.
-
-- **Fitting the Transformation Matrix (Method 2)**
-
-Instead of feeding all of our SIFT keypoint matches into `ComputeAffineMatrix.m`, one may want to use **RANSAC (“RANdom SAmple Consensus”)** to select only **inliers** to use to compute the transformation matrix. 
-
-Function `ComputeError(H, pt1, pt2, match)` in my `RANSACfit.m` I implemented:
-```
-dists = zeros(size(match,1),1);
-    
-    pt1s = [pt1(match(:, 1),:), ones(size(match, 1),1)];
-    trans_pt1s = H * pt1s';
-    trans_pt1s_transpose = trans_pt1s';
-    pt2s = [pt2(match(:, 2),:), ones(size(match, 1),1)];
-    
-    for i = 1: size(match, 1)
-        dist = sqrt(sum((trans_pt1s_transpose(i, :) - pt2s(i, :)) .^ 2));
-        dists(i) = dist;;
-    end
-```
-Then output is `dists`: An M x 1 vector where dists(i) is the error of fitting the i-th match to the given transformation matrix.
-
 - **Turning to better method: SIFT and Bag-Of-Features**
 Beyond the easily but worse-performance approaches like tiny pictures, one more popular and much better approach of feature representation is the combination of SIFT and Bag-of-Features. To implement, one should firstly build an **vocabulary dictionary**, which is essentially visual words clusters. 
 
