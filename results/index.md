@@ -9,6 +9,7 @@ The project is related to the whole process of image classification. It required
 There're actually five `.m` file should be completed in this project, which are `get_tiny_images.m`, `nearest_neighbor_classify.m`, `build_vocabulary.m`, `get_bags_of_sifts.m`, and `svm_classify.m`.
 
 - **Using tiny images as feature representation**
+
 With [VLFeat](http://www.vlfeat.org/), one can easily extract SIFT from any image. In my implementation I used Matlab interface of VLFeat to get the descriptors. To build a tiny image feature, simply resize the original image to a very small square resolution, e.g. 16x16. 
 
 In my `get_tiny_images.m`, mainly codes like below:
@@ -35,6 +36,7 @@ end
 note that new_img vectors are normalized as unit length and zero mean.
 
 - **Classifying by the Nearest Neighbor**
+
 One of the easiest way to dealing with classification problem is by nearest neighbor approach. Just find the **nearest** training pictures of testing pictures. However, this approach is easily affected by noises.
 
 In my `nearest_neighbor_classify.m`, mainly codes like below:
@@ -51,6 +53,7 @@ end
 ```
 
 - **Turning to better method: SIFT and Bag-Of-Features**
+
 Beyond the easily but worse-performance approaches like tiny pictures, one more popular and much better approach of feature representation is the combination of SIFT and Bag-of-Features. To implement, one should firstly build an **vocabulary dictionary**, which is essentially visual words clusters. 
 
 In my `build_vocabulary.m` file, 
@@ -95,6 +98,7 @@ end
 ```
 
 - **Classification with Support Vector Machine**
+
 One of the most popular and high-accuracy approach of classification is Support Vector Machine (SVM). Linear SVM can be good when applied to data which are of high dimension. 
 
 In my `svm_classiy.m` file, I first construct the labels of all training data:
