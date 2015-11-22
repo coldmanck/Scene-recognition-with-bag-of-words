@@ -53,8 +53,18 @@ Useful functions:
 % images, cluster them with kmeans. The resulting centroids are now your
 % visual word vocabulary.
 
+step = 15;
+bin_size = 8;
+features = [];
 
+for i = 1:length(image_paths)
+    img = single( imread(image_paths{i}) );
+    if size(img, 3) > 1
+        img =rgb2gray(img);
+    end
+    [locations, SIFT_features] = vl_dsift(img, 'fast', 'step', step, 'size', bin_size);
+    features = [features, SIFT_features];
+end
 
-
-
-
+[centers, assignments] = vl_kmeans(double(features), vocab_size)
+vocab = centers';

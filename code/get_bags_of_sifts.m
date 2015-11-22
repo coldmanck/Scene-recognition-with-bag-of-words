@@ -3,7 +3,7 @@
 %This feature representation is described in the handout, lecture
 %materials, and Szeliski chapter 14.
 
-function image_feats = get_bags_of_sifts(image_paths)
+function image_feats = get_bags_of_sifts(image_paths, vocab_size)
 % image_paths is an N x 1 cell array of strings where each string is an
 % image path on the file system.
 
@@ -58,9 +58,29 @@ and using KD-trees.
 
 %}
 
-load('vocab.mat')
+% load('vocab.mat')
+load(['vocab_size', num2str(vocab_size),'.mat']);
 vocab_size = size(vocab, 2);
 
+step = 3;
+bin_size = 8;
+image_feats = [];
+forest = vl_kdtreebuild(vocab');
 
-
+for i = 1:length(image_paths)
+    img = single( imread(image_paths{i}) );
+    if size(img, 3) > 1
+        img =rgb2gray(img);
+    end
+    
+    [locations, SIFT_features] = vl_dsift(img, 'step', step, 'size', bin_size);
+    
+    [index , dist] = vl_kdtreequery(forest , vocab' , double(SIFT_features));
+    
+    feature_hist = hist(double(index), vocab_size);
+    feature_hist = feature_hist ./ sum(feature_hist);
+    % feature_hist = feature_hist ./ norm(feature_hist);
+    
+    image_feats(i, :) = feature_hist;
+end
 

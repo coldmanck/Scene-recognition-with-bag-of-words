@@ -39,13 +39,13 @@ Useful functions:
 
 %}
 
+dist = vl_alldist2(train_image_feats', test_image_feats');
+dist = dist';
 
-
-
-
-
-
-
-
-
-
+predicted_categories = [];
+for i = 1:size(test_image_feats,1)
+    [Y, I] = min(dist(i, :));
+    label = train_labels(I, 1);
+    predicted_categories = [predicted_categories; label];
+end
+ 

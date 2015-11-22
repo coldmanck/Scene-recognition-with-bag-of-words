@@ -20,8 +20,21 @@ function image_feats = get_tiny_images(image_paths)
 
 % suggested functions: imread, imresize
 
+image_feats = [];
+length = 16;
 
-
-
-
-
+for i = 1:size(image_paths)
+    img = imread(image_paths{i, 1});
+    img = imresize(img, [length length]);
+    
+    new_img = [];
+    for j = 1:length
+        new_img = [new_img, img(j, :)];
+    end
+    
+    new_img = double(new_img);
+    new_img = new_img ./ norm(new_img);
+    new_img = new_img - mean(new_img);
+    
+    image_feats = [image_feats; new_img];
+end

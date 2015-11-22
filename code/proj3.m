@@ -16,17 +16,18 @@
 %results are presented.
 
 % FEATURE = 'tiny image';
-% FEATURE = 'bag of sift';
-FEATURE = 'placeholder';
+FEATURE = 'bag of sift';
+% FEATURE = 'placeholder';
 
 % CLASSIFIER = 'nearest neighbor';
 % CLASSIFIER = 'support vector machine';
-CLASSIFIER = 'placeholder';
+CLASSIFIER = 'libsvm';
+% CLASSIFIER = 'placeholder';
 
 % set up paths to VLFeat functions. 
 % See http://www.vlfeat.org/matlab/matlab.html for VLFeat Matlab documentation
 % This should work on 32 and 64 bit versions of Windows, MacOS, and Linux
-%run('vlfeat/toolbox/vl_setup')
+run('/home/coldmanck/lib/vlfeat-0.9.20/toolbox/vl_setup')
 
 data_path = '../data/'; %change if you want to work with a network copy
 
@@ -74,16 +75,27 @@ switch lower(FEATURE)
         
     case 'bag of sift'
         % YOU CODE build_vocabulary.m
-        if ~exist('vocab.mat', 'file')
+        vocab_size = 1000; %Larger values will work better (to a point) but be slower to compute
+        if ~exist(['vocab_size', num2str(vocab_size),'.mat'], 'file')
             fprintf('No existing visual word vocabulary found. Computing one from training images\n')
-            vocab_size = 400; %Larger values will work better (to a point) but be slower to compute
             vocab = build_vocabulary(train_image_paths, vocab_size);
-            save('vocab.mat', 'vocab')
+            save(['vocab_size', num2str(vocab_size),'.mat'], 'vocab')
         end
         
         % YOU CODE get_bags_of_sifts.m
-        train_image_feats = get_bags_of_sifts(train_image_paths);
-        test_image_feats  = get_bags_of_sifts(test_image_paths);
+        if ~exist(['train_image_feats_size', num2str(vocab_size),'.mat'], 'file')
+            train_image_feats = get_bags_of_sifts(train_image_paths, vocab_size);
+			save(['train_image_feats_size', num2str(vocab_size), '.mat'], 'train_image_feats');
+        else
+            load(['train_image_feats_size', num2str(vocab_size),'.mat']);
+        end
+        
+        if ~exist(['test_image_feats_size', num2str(vocab_size), '.mat'])
+            test_image_feats  = get_bags_of_sifts(test_image_paths, vocab_size);
+			save(['test_image_feats_size', num2str(vocab_size), '.mat'], 'test_image_feats');
+        else
+            load(['test_image_feats_size', num2str(vocab_size), '.mat']);
+        end
         
     case 'placeholder'
         train_image_feats = [];
@@ -116,7 +128,10 @@ switch lower(CLASSIFIER)
     case 'support vector machine'
         % YOU CODE svm_classify.m 
         predicted_categories = svm_classify(train_image_feats, train_labels, test_image_feats);
-        
+
+	case 'libsvm'
+		predicted_categories = libsvm_classify(train_image_feats, train_labels, test_image_feats);
+
     case 'placeholder'
         %The placeholder classifier simply predicts a random category for
         %every test case
@@ -146,7 +161,7 @@ create_results_webpage( train_image_paths, ...
                         test_labels, ...
                         categories, ...
                         abbr_categories, ...
-                        predicted_categories)
+                        predicted_categories);
 
 % Interpreting your performance with 100 training examples per category:
 %  accuracy  =   0 -> Your code is broken (probably not the classifier's

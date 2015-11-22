@@ -48,5 +48,25 @@ Useful functions:
 categories = unique(train_labels); 
 num_categories = length(categories);
 
+lambda = 1e-06;
+scores = [];
 
+for i = 1:num_categories
+    % Create a training label
+    matching_indices = strcmp(categories(i) , train_labels);
+    matching_indices = double(matching_indices);
+    for j = 1: size(train_labels, 1)
+        if(matching_indices(j) == 0)
+            matching_indices(j) = -1;
+        end
+    end
+    
+    % Train a linvear SVM classifier
+    [w, b] = vl_svmtrain(train_image_feats', matching_indices, lambda);
+    
+    scores = [scores; (w' * test_image_feats' + b) ];
+end
 
+% get maximum scores
+[max_values, max_indices] = max(scores);
+predicted_categories = categories(max_indices');
