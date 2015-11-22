@@ -181,14 +181,14 @@ Accuracy (mean of diagonal of confusion matrix) is 0.201
 <tr>
 <td>Kitchen</td>
 <td>0.060</td>
-<td bgcolor=LightBlue><img src="thumbnails/Kitchen_image_0210.jpg" width=100 height=75></td>
-<td bgcolor=LightBlue><img src="thumbnails/Kitchen_image_0087.jpg" width=114 height=75></td>
-<td bgcolor=LightGreen><img src="thumbnails/Kitchen_image_0175.jpg" width=100 height=75></td>
-<td bgcolor=LightGreen><img src="thumbnails/Kitchen_image_0110.jpg" width=100 height=75></td>
-<td bgcolor=LightCoral><img src="thumbnails/Office_image_0131.jpg" width=119 height=75><br><small>Office</small></td>
-<td bgcolor=LightCoral><img src="thumbnails/InsideCity_image_0069.jpg" width=75 height=75><br><small>InsideCity</small></td>
-<td bgcolor=#FFBB55><img src="thumbnails/Kitchen_image_0036.jpg" width=57 height=75><br><small>Highway</small></td>
-<td bgcolor=#FFBB55><img src="thumbnails/Kitchen_image_0156.jpg" width=91 height=75><br><small>TallBuilding</small></td>
+<td bgcolor=LightBlue><img src="../data/train/Kitchen/image_0210.jpg" width=100 height=75></td>
+<td bgcolor=LightBlue><img src="../data/train/Kitchen/image_0087.jpg" width=114 height=75></td>
+<td bgcolor=LightGreen><img src="../data/train/Kitchen/image_0175.jpg" width=100 height=75></td>
+<td bgcolor=LightGreen><img src="../data/train/Kitchen/image_0110.jpg" width=100 height=75></td>
+<td bgcolor=LightCoral><img src="../data/train/Office/image_0131.jpg" width=119 height=75><br><small>Office</small></td>
+<td bgcolor=LightCoral><img src="../data/train/InsideCity/image_0069.jpg" width=75 height=75><br><small>InsideCity</small></td>
+<td bgcolor=#FFBB55><img src="../data/train/Kitchen/image_0036.jpg" width=57 height=75><br><small>Highway</small></td>
+<td bgcolor=#FFBB55><img src="../data/train/Kitchen/image_0156.jpg" width=91 height=75><br><small>TallBuilding</small></td>
 </tr>
 <tr>
 <td>Store</td>
