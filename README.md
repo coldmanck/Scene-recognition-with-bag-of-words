@@ -5,6 +5,7 @@ An example of a typical bag of words classification pipeline. Figure by <a href=
 <h1>Project 3: Scene recognition with bag of words<br>
 </h1> 
 
+Find my implementation result [here](https://github.com/coldmanck/Project-3-Scene-recognition-with-bag-of-words/blob/master/results/index.md).
  
 <h2>Brief</h2> 
 <p> 
